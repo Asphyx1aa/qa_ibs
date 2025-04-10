@@ -1,0 +1,40 @@
+package pages;
+
+import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
+
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
+
+public class RatingsPage {
+    private final SelenideElement filter = $(".selection"),
+            resultYear = $(".approve-group__year");
+
+    @Step("Открываем страницу рейтингов")
+    public RatingsPage openPage() {
+        open("/about/ratings/");
+        return this;
+    }
+
+    @Step("Кликаем по фильтру")
+    public RatingsPage clickOnFilter() {
+        filter.click();
+        return this;
+    }
+
+    @Step("Выбир")
+    public RatingsPage chooseYear(String year) {
+        $(byText(year)).click();
+        return this;
+    }
+
+    @Step("Проверяем выбранный год")
+    public RatingsPage checkResultYear(String year) {
+        resultYear.shouldHave(text(year));
+        return this;
+    }
+
+
+}
