@@ -11,7 +11,7 @@ public class ContactsPage {
 
     @Step("Проверяем, что отображается адрес на странице")
     public ContactsPage checkThatAddressShow(String address) {
-        addressBlock.shouldHave(text(address));
+        addressBlock.scrollTo().shouldHave(text(address));
         return this;
     }
 }
