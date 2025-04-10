@@ -60,7 +60,7 @@ public class IbsTests extends TestBase {
     }
 
     @CsvFileSource(resources = "/menuItems.csv")
-    @ParameterizedTest(name = "Тест")
+    @ParameterizedTest(name = "Проверка пунктов меню сайта")
     @Tag("Меню")
     @Severity(NORMAL)
     void siteMenuShouldHaveAllItemsTest(String services, String solutions, String projects, String createdInIbs, String career, String media,
