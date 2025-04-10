@@ -24,7 +24,7 @@ public class RatingsPage {
         return this;
     }
 
-    @Step("Выбир")
+    @Step("Выбираем год {year}")
     public RatingsPage chooseYear(String year) {
         $(byText(year)).click();
         return this;
