@@ -10,6 +10,7 @@ ___
 - <a href="#cases">Примеры автоматизированных тест-кейсов</a>
 - <a href="#jenkins">Сборка в Jenkins</a>
 - - <a href="#jenkins-params">Параметры сборки в Jenkins</a> 
+- - <a href="#commands">Команды для запуска из терминала</a> 
 - <a href="#allure">Allure Report</a>
 - - <a href="#allure-report">Основная страница отчета</a>
 - - <a href="#allure-cases">Тест-кейсы</a>
@@ -54,6 +55,25 @@ ___
 - *BROWSER_SIZE* (размер окна браузера, по умолчанию 1920x1080)
 - *LOGIN_USERNAME* (логин для удаленного сервера)
 - *USER_PW* (пароль для удаленного сервера)
+
+<a id="commands"></a>
+### Команды для запуска из терминала
+
+Локальный запуск:
+```bash
+gradle clean test
+```
+
+Удалённый запуск через Jenkins:
+```bash
+gradle clean test
+"-Dwdhost=${WDHOST}"
+"-Dbrowser=${BROWSER}"
+"-Dbrowser_version=${BROWSER_VERSION}"
+"-Dbrowser_size=${BROWSER_SIZE}"
+"-Dpassword=${USER_PW}"
+"-Dlogin=${LOGIN_USERNAME}"
+```
 
 <a id="allure"></a>
 ## <img src="media/Allure.svg" width="20" height="20" /> Allure Report
