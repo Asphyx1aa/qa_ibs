@@ -9,7 +9,7 @@ ___
 - <a href="tools">Технологии и инструменты</a>
 ___
 
-<a id="tools"></a>
+<a id="#tools"></a>
 ## Технологии и инструменты:
 ___
 <a href="https://www.jetbrains.com/idea/"><img src="media/intellij-original.svg" width="50" height="50" /></a>
