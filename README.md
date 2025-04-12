@@ -38,8 +38,14 @@ ___
 <img src="media/jenkins.jpg"/>
 
 ### Параметры сборки в Jenkins
+- *WDHOST* (адрес удаленного сервера Selenoid)
+- *BROWSER* (браузер, по умолчанию chrome)
+- *BROWSER_VERSION* (версия браузера, по умолчанию 128.0)
+- *BROWSER_SIZE* (размер окна браузера, по умолчанию 1920x1080)
+- *LOGIN_USERNAME* (логин для удаленного сервера)
+- *USER_PW* (пароль для удаленного сервера)
 
-## Allure Report
+## <img src="media/allure.svg" width="20" height="20" /> Allure Report
 ___
 ### Основная страница отчета
 <img src="media/allure-overview.jpg"/>
@@ -47,7 +53,7 @@ ___
 ### Тест-кейсы
 <img src="media/allure-report.jpg"/>
 
-## Allure TestOps
+## Интеграция с Allure TestOps
 <img src="media/allure-testops.jpg"/>
 
 <a id="telegram"></a>
