@@ -7,6 +7,14 @@ ____
 ___
 
 - <a href="#tools">Технологии и инструменты</a>
+- <a href="#cases">Примеры автоматизированных тест-кейсов</a>
+- <a href="#jenkins">Сборка в Jenkins</a>
+- - <a href="#jenkins-params">Параметры сборки в Jenkins</a> 
+- <a href="#allure">Allure Report</a>
+- - <a href="#allure-report">Основная страница отчета</a>
+- - <a href="#allure-cases">Тест-кейсы</a>
+- <a href="#testops">Интеграция с Allure TestOps</a>
+- <a href="#jira">Интеграция с JIRA</a>
 - <a href="#telegram">Уведомления в телеграм при помощи бота</a>
 - <a href="#video">Примеры видео выполнения тестов на Selenoid</a>
 ___
@@ -26,6 +34,7 @@ ___
 <a href="https://www.atlassian.com/software/jira"><img src="media/Jira.svg" width="50" height="50" /></a>
 </p>
 
+<a id="cases"></a>
 ## Примеры автоматизированных тест-кейсов:
 - Проверка работы фильтра на странице рейтинга
 - Проверка корректной работы поиска в шапке сайта
@@ -33,10 +42,11 @@ ___
 - Переход на страницу Контакты и проверка адреса
 - Проверка на наличие всех разделов в меню сайта
 
-
+<a id="jenkins"></a>
 ## <img src="media/jenkins-original.svg" width="20" height="20" /> Сборка в [Jenkinks](https://jenkins.autotests.cloud/job/033_undef1ned_0_hw14/)
 <img src="media/jenkins.jpg"/>
 
+<a id="jenkins-params"></a>
 ### Параметры сборки в Jenkins
 - *WDHOST* (адрес удаленного сервера Selenoid)
 - *BROWSER* (браузер, по умолчанию chrome)
@@ -45,16 +55,24 @@ ___
 - *LOGIN_USERNAME* (логин для удаленного сервера)
 - *USER_PW* (пароль для удаленного сервера)
 
-## <img src="media/allure.svg" width="20" height="20" /> Allure Report
+<a id="allure"></a>
+## <img src="media/Allure.svg" width="20" height="20" /> Allure Report
 ___
+
+<a id="allure-report"></a>
 ### Основная страница отчета
 <img src="media/allure-overview.jpg"/>
 
+<a id="allure-cases"></a>
 ### Тест-кейсы
 <img src="media/allure-report.jpg"/>
 
-## Интеграция с Allure TestOps
+<a id="testops"></a>
+## <img src="media/qameta.svg" width="20" height="20" /> Интеграция с Allure TestOps
 <img src="media/allure-testops.jpg"/>
+
+<a id="jira"></a>
+## <img src="media/Jira.svg" width="20" height="20" /> Интеграция с JIRA
 
 <a id="telegram"></a>
 ## <img src="media/Telegram.svg" width="20" height="20" /> Уведомления в телеграм при помощи бота:
