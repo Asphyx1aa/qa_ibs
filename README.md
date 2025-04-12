@@ -19,7 +19,7 @@ ___
 - <a href="#video">Примеры видео выполнения тестов на Selenoid</a>
 ___
 
-<a id="#tools"></a>
+<a id="tools"></a>
 ## Технологии и инструменты:
 <p align="center">
 <a href="https://www.jetbrains.com/idea/"><img src="media/intellij-original.svg" width="50" height="50" /></a>
@@ -73,6 +73,7 @@ ___
 
 <a id="jira"></a>
 ## <img src="media/Jira.svg" width="20" height="20" /> Интеграция с JIRA
+<img src="media/jira.jpg"/>
 
 <a id="telegram"></a>
 ## <img src="media/Telegram.svg" width="20" height="20" /> Уведомления в телеграм при помощи бота:
