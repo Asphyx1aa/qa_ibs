@@ -17,10 +17,13 @@ ___
 <a href="https://www.jetbrains.com/idea/"><img src="media/intellij-original.svg" width="50" height="50" /></a>
 <a href="https://www.java.com/"><img src="media/java-original.svg" width="50" height="50" /></a>
 <a href="https://junit.org/junit5/"><img src="media/junit-original-wordmark.svg" width="50" height="50" /></a>
+<a href="https://selenide.org/"><img src="media/Selenide.svg" width="50" height="50" /></a>
 <a href="https://github.com/"><img src="media/github-original.svg" width="50" height="50" /></a>
 <a href="https://gradle.org/"><img src="media/gradle-original.svg" width="50" height="50" /></a>
 <a href="https://www.jenkins.io/"><img src="media/jenkins-original.svg" width="50" height="50" /></a>
-<a href="https://www.jenkins.io/"><img src="media/Allure.svg" width="50" height="50" /></a>
+<a href="https://allurereport.org/"><img src="media/Allure.svg" width="50" height="50" /></a>
+<a href="https://qameta.io/"><img src="media/qameta.svg" width="50" height="50" /></a>
+<a href="https://www.atlassian.com/software/jira"><img src="media/Jira.svg" width="50" height="50" /></a>
 </p>
 
 ## Примеры автоматизированных тест-кейсов:
@@ -48,12 +51,12 @@ ___
 <img src="media/allure-testops.jpg"/>
 
 <a id="telegram"></a>
-## Уведомления в телеграм при помощи бота:
+## <img src="media/Telegram.svg" width="20" height="20" /> Уведомления в телеграм при помощи бота:
 ___
 <img src="media/telegram-notify.jpg"/>
 
 
 <a id="video"></a>
-## Примеры видео выполнения тестов на Selenoid:
+## <img src="media/Selenoid.svg" width="20" height="20" /> Примеры видео выполнения тестов на Selenoid:
 ___
 <img src="media/videotest.gif"/>
