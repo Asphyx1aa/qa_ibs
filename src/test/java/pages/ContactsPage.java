@@ -4,6 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class ContactsPage {
@@ -11,6 +12,7 @@ public class ContactsPage {
 
     @Step("Проверяем, что отображается адрес на странице")
     public ContactsPage checkThatAddressShow(String address) {
+        addressBlock.shouldBe(visible);
         addressBlock.scrollTo().shouldHave(text(address));
         return this;
     }

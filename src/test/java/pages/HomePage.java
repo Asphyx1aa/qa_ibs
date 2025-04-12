@@ -4,6 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -26,12 +27,14 @@ public class HomePage {
 
     @Step("Кликаем по поиску в шапке")
     public HomePage clickOnSearchField() {
+        headerSearch.shouldBe(visible);
         headerSearch.click();
         return this;
     }
 
     @Step("Открываем боковое меню сайта")
     public HomePage openSiteMenu() {
+        headerBurger.shouldBe(visible);
         headerBurger.click();
         return this;
     }
