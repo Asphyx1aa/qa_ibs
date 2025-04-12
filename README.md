@@ -33,7 +33,7 @@ ___
 <img src="media/telegram-notify.jpg"/>
 
 
-<a id="#video"></a>
+<a id="video"></a>
 ## Примеры видео выполнения тестов на Selenoid:
 ___
 <img src="media/videotest.gif"/>
