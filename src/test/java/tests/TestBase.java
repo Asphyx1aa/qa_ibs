@@ -12,22 +12,28 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
 
+import static helpers.EnvHelper.isRemote;
+
 public class TestBase {
     @BeforeAll
     static void testSetup() {
-        Configuration.baseUrl = "https://ibs.ru";
-        Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
-        Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("browser_version", "128.0");
-        Configuration.pageLoadStrategy = "eager";
-        Configuration.remote = getServer();
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-                "enableVNC", true,
-                "enableVideo", true
-        ));
-        Configuration.browserCapabilities = capabilities;
+        if (isRemote) {
+            Configuration.remote = getServer();
+
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                    "enableVNC", true,
+                    "enableVideo", true
+            ));
+            Configuration.browserCapabilities = capabilities;
+        } else {
+            Configuration.baseUrl = "https://ibs.ru";
+            Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
+            Configuration.browser = System.getProperty("browser", "chrome");
+            Configuration.browserVersion = System.getProperty("browser_version", "");
+            Configuration.pageLoadStrategy = "eager";
+        }
     }
 
     @BeforeEach

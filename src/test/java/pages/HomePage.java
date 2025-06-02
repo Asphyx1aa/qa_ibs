@@ -64,7 +64,7 @@ public class HomePage {
     }
 
     @Step("Проверяем разделы в меню сайта")
-    public HomePage checkMenuItems(String item) {
+    public HomePage checkMenuItem(String item) {
         navSections.shouldHave(text(item));
         return this;
     }

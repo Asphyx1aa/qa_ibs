@@ -67,13 +67,13 @@ public class IbsTests extends TestBase {
                                         String aboutCompany) {
         homePage.openPage()
                 .openSiteMenu()
-                .checkMenuItems(services)
-                .checkMenuItems(solutions)
-                .checkMenuItems(projects)
-                .checkMenuItems(createdInIbs)
-                .checkMenuItems(career)
-                .checkMenuItems(media)
-                .checkMenuItems(aboutCompany);
+                .checkMenuItem(services)
+                .checkMenuItem(solutions)
+                .checkMenuItem(projects)
+                .checkMenuItem(createdInIbs)
+                .checkMenuItem(career)
+                .checkMenuItem(media)
+                .checkMenuItem(aboutCompany);
     }
 
     @Test

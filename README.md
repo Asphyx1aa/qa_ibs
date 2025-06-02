@@ -44,7 +44,7 @@ ___
 - Проверка на наличие всех разделов в меню сайта
 
 <a id="jenkins"></a>
-## <img src="media/jenkins-original.svg" width="20" height="20" /> Сборка в [Jenkinks](https://jenkins.autotests.cloud/job/033_undef1ned_0_hw14/)
+## <img src="media/jenkins-original.svg" width="20" height="20" /> Сборка в [Jenkinks](https://jenkins.autotests.cloud/job/033_undef1ned_0_diploma23_ui)
 <img src="media/jenkins.jpg"/>
 
 <a id="jenkins-params"></a>
@@ -76,11 +76,13 @@ gradle clean test
 ```
 
 <a id="allure"></a>
-## <img src="media/Allure.svg" width="20" height="20" /> Allure Report
+## <img src="media/Allure.svg" width="20" height="20" /> [Allure Report](https://jenkins.autotests.cloud/job/033_undef1ned_0_diploma23_ui/13/allure)
 ___
+> Allure Report - Фреймворк для формирования удобных и наглядных отчетов о результатах автотестов. Помогает быстро увидеть, какие тесты упали и почему.
 
 <a id="allure-report"></a>
 ### Основная страница отчета
+
 <img src="media/allure-overview.jpg"/>
 
 <a id="allure-cases"></a>
@@ -88,11 +90,18 @@ ___
 <img src="media/allure-report.jpg"/>
 
 <a id="testops"></a>
-## <img src="media/qameta.svg" width="20" height="20" /> Интеграция с Allure TestOps
+## <img src="media/qameta.svg" width="20" height="20" /> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/4711)
+___
+> Allure TestOps - платформа для управления автотестами: запуск, аналитика, отслеживание стабильности, ручные тест-кейсы и интеграция с Jira.
+
+
 <img src="media/allure-testops.jpg"/>
 
 <a id="jira"></a>
-## <img src="media/Jira.svg" width="20" height="20" /> Интеграция с JIRA
+## <img src="media/Jira.svg" width="20" height="20" /> Интеграция с [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-1439)
+___
+> Jira – система трекинга задач и багов. Используется для управления проектом, привязки тест-кейсов и отображения статуса выполнения тестов через интеграцию с TestOps.
+> 
 <img src="media/jira.jpg"/>
 
 <a id="telegram"></a>
@@ -104,4 +113,6 @@ ___
 <a id="video"></a>
 ## <img src="media/Selenoid.svg" width="20" height="20" /> Примеры видео выполнения тестов на Selenoid:
 ___
+> Selenoid - инструмент для запуска браузеров в Docker-контейнерах. Позволяет параллельно и стабильно выполнять UI-тесты в разных браузерах.
+
 <img src="media/videotest.gif"/>
