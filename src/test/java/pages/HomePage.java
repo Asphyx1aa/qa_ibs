@@ -51,12 +51,6 @@ public class HomePage {
         return this;
     }
 
-    @Step("Открываем страницу Контакты")
-    public HomePage openContactsPage() {
-        contactsLink.click();
-        return this;
-    }
-
     @Step("Убеждаемся, что язык переключился на английский")
     public HomePage checkLanguageSwitched(String value) {
         homePageTitle.shouldHave(text(value));

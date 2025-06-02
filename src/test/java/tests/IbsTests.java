@@ -55,8 +55,7 @@ public class IbsTests extends TestBase {
                 E-mail: ibs@ibs.ru
                 """;
 
-        homePage.openPage().openContactsPage();
-        contactsPage.checkThatAddressShow(address);
+        contactsPage.openPage().checkThatAddressShow(address);
     }
 
     @CsvFileSource(resources = "/menuItems.csv")
