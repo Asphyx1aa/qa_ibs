@@ -61,7 +61,7 @@ ___
 
 Локальный запуск:
 ```bash
-gradle clean test
+gradle clean test -Denv=local
 ```
 
 Удалённый запуск через Jenkins:
