@@ -18,6 +18,12 @@ public class TestBase {
     @BeforeAll
     static void testSetup() {
 
+        Configuration.baseUrl = System.getProperty("URL", "https://ibs.ru");
+        Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion = System.getProperty("browser_version", "");
+        Configuration.pageLoadStrategy = "eager";
+
         if (isRemote) {
             Configuration.remote = getServer();
 
@@ -27,12 +33,6 @@ public class TestBase {
                     "enableVideo", true
             ));
             Configuration.browserCapabilities = capabilities;
-        } else {
-            Configuration.baseUrl = "https://ibs.ru";
-            Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
-            Configuration.browser = System.getProperty("browser", "chrome");
-            Configuration.browserVersion = System.getProperty("browser_version", "");
-            Configuration.pageLoadStrategy = "eager";
         }
     }
 
