@@ -11,7 +11,8 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class RatingsPage {
     private final SelenideElement filter = $(".selection"),
-            resultYear = $(".approve-group__year");
+            resultYear = $(".approve-group__year"),
+            newsResultYear = $(".approve-item__source");
 
     @Step("Открываем страницу рейтингов")
     public RatingsPage openPage() {
@@ -35,6 +36,7 @@ public class RatingsPage {
     @Step("Проверяем выбранный год")
     public RatingsPage checkResultYear(String year) {
         resultYear.shouldHave(text(year));
+        newsResultYear.shouldBe(visible).shouldHave(text(year));
         return this;
     }
 

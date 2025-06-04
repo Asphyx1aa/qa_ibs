@@ -51,8 +51,8 @@ public class HomePage {
         return this;
     }
 
-    @Step("Убеждаемся, что язык переключился на английский")
-    public HomePage checkLanguageSwitched(String value) {
+    @Step("Убеждаемся, что язык переключился")
+    public HomePage checkLanguage(String value) {
         homePageTitle.shouldHave(text(value));
         return this;
     }

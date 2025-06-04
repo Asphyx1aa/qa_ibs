@@ -5,11 +5,12 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
-import pages.ContactsPage;
-import pages.HomePage;
-import pages.RatingsPage;
-import pages.SearchPage;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+import pages.*;
+
+import java.util.List;
+import java.util.stream.Stream;
 
 import static io.qameta.allure.SeverityLevel.*;
 
@@ -18,6 +19,7 @@ public class IbsTests extends TestBase {
     final SearchPage searchPage = new SearchPage();
     final ContactsPage contactsPage = new ContactsPage();
     final RatingsPage ratingsPage = new RatingsPage();
+    final CareerPage careerPage = new CareerPage();
 
     @DisplayName("Проверка корректной работы поиска в шапке сайта")
     @Tag("Поиск")
@@ -40,7 +42,7 @@ public class IbsTests extends TestBase {
         String text = "Smart Choices in Evolving Technologies";
         homePage.openPage()
                 .clickOnLanguageSwitchButton()
-                .checkLanguageSwitched(text);
+                .checkLanguage(text);
     }
 
     @DisplayName("Переход на страницу Контакты и проверка адреса")
@@ -58,21 +60,17 @@ public class IbsTests extends TestBase {
         contactsPage.openPage().checkThatAddressShow(address);
     }
 
-    @CsvFileSource(resources = "/menuItems.csv")
+    @MethodSource("menuItemsProvider")
     @ParameterizedTest(name = "Проверка пунктов меню сайта")
     @Tag("Меню")
     @Severity(NORMAL)
-    void siteMenuShouldHaveAllItemsTest(String services, String solutions, String projects, String createdInIbs, String career, String media,
-                                        String aboutCompany) {
+    void siteMenuShouldHaveAllItemsTest(List<String> menuItems) {
         homePage.openPage()
-                .openSiteMenu()
-                .checkMenuItem(services)
-                .checkMenuItem(solutions)
-                .checkMenuItem(projects)
-                .checkMenuItem(createdInIbs)
-                .checkMenuItem(career)
-                .checkMenuItem(media)
-                .checkMenuItem(aboutCompany);
+                .openSiteMenu();
+
+        for (String item : menuItems) {
+            homePage.checkMenuItem(item);
+        }
     }
 
     @Test
@@ -86,5 +84,39 @@ public class IbsTests extends TestBase {
                 .clickOnFilter()
                 .chooseYear(year)
                 .checkResultYear(year);
+    }
+
+    @Test
+    @DisplayName("Проверяем поиск по вакансии")
+    @Tag("Поиск")
+    @Severity(NORMAL)
+    void searchJobTest() {
+        String jobName = "Тестировщик";
+
+        careerPage.openPage().setValueInSearchField(jobName).checkResult();
+    }
+
+    @Test
+    @DisplayName("Проверяем фильтр по вакансии")
+    @Tag("Фильтр")
+    @Severity(NORMAL)
+    void filterJobTest() {
+        String filterName = "Вакансии без опыта";
+
+        careerPage.openPage().clickOnFilter(filterName).checkFilter(filterName);
+    }
+
+    static Stream<Arguments> menuItemsProvider() {
+        return Stream.of(
+                Arguments.of(List.of(
+                        "Услуги",
+                        "Решения",
+                        "Проекты",
+                        "Создано в IBS",
+                        "Карьера",
+                        "Медиа",
+                        "О компании"
+                ))
+        );
     }
 }
